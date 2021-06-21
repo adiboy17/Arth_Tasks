@@ -1,0 +1,14 @@
+[datanode2]
+192.168.206.22 ansible_user=root ansible_ssh_pass=redhat ansible_ssh_connection=ssh
+
+[datanode1]
+192.168.206.111 ansible_user=root ansible_ssh_pass=redhat ansible_ssh_connection=ssh
+
+[namenode]
+192.168.206.200 ansible_user=root ansible_ssh_pass=toor ansible_ssh_connection=ssh
+
+[datanode:children]
+datanode1
+datanode2
+~                                                                               
+~  
